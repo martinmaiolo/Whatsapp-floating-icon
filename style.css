@@ -1,0 +1,42 @@
+#whatsappFloatingButton {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	width: 60px;
+	height: 60px;
+	background-color: #25d366;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	z-index: 1000;
+	animation: whatsappButtonAnimation 0.5s;
+}
+  
+#whatsappFloatingButton svg {
+	width: 36px;
+	fill: #fff;
+}
+  
+@-webkit-keyframes whatsappButtonAnimation {
+	0% {
+		transform: scale3d(0, 0, 0);
+		transition: transform 0.3s ease-in-out;
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+		transition: transform 0.5s cubic bezier(0.18, 0.89, 0.32, 1.28);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#whatsappFloatingButton {
+		width: 36px;
+		height: 36px;
+	}
+
+	#whatsappFloatingButton svg {
+		width: 20px;
+	}
+}
